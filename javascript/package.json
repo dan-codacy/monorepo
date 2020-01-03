@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha",
+    "coverage": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-summary npm test",
+    "coverage-for-codacy": "npm coverage && cat ./coverage/lcov.info | codacy-coverage -v"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^6.2.2"
+    "codacy-coverage": "^3.4.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1"
   }
 }

@@ -1,4 +1,3 @@
-import pytest 
 from src.fizzbuzz import FizzBuzz
 
 def test_2_returns_1():
