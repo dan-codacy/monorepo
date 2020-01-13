@@ -10,11 +10,11 @@ describe('FizzBuzz - First Half', function() {
       assert.equal(fizzbuzz(2), "2");
     });
 
-    it('should return Fizz when the input is 3', function() {
+    it('should return "Fizz" when the input is 3', function() {
       assert.equal(fizzbuzz(3), "Fizz");
     });
 
-    it('should return Fizz when the input is 6', function() {
+    it('should return "Fizz" when the input is 6', function() {
       assert.equal(fizzbuzz(6), "Fizz");
     });
 
