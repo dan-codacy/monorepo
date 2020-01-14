@@ -49,11 +49,9 @@
         "react-hooks",
         "react-native",
         "react",
-        "redux-saga",
         "relay",
         "security",
         "standard",
-        "@typescript-eslint",
         "vue",
         "wdio",
         "xss"
