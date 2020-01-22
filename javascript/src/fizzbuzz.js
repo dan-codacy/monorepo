@@ -1,7 +1,7 @@
 module.exports = function(input) {
     let output = ''
     if(input % 3 === 0) 
-        output += 'Fizz'
+        output += 'Bizz'
     if(input % 5 === 0) 
         output += 'Buzz'
 
