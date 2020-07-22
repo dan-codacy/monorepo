@@ -64,6 +64,7 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
+    "ignorePatterns": ["*.json"],
     "rules": {
         "arrow-parens": "error",
         "arrow-spacing": "error",
