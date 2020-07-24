@@ -12,6 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "codacy-coverage": "^3.4.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-json": "^2.1.1",
     "mocha": "^6.2.2",
     "nyc": "^14.1.1"
   }
