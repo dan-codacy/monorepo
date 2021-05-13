@@ -31,3 +31,10 @@ func TestFizzBuzz_15(t *testing.T) {
         t.Errorf("fizzbuzz(15) = %s; want 'FizzBuzz'", ans)
     }
 }
+
+func TestFizzBuzz_1(t *testing.T) {
+    ans := fizzbuzz(1)
+    if ans != "1" {
+        t.Errorf("fizzbuzz(1) = %s; want '1'", ans)
+    }
+}
