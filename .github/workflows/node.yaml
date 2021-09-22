@@ -39,6 +39,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-coverage-report
-          path: coverage/lcov.info
+          path: javascript/coverage/lcov.info
       
           

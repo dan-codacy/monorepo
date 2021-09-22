@@ -38,6 +38,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: python-coverage-report
-          path: coverage.xml
+          path: python/coverage.xml
 
           
