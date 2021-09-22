@@ -31,9 +31,11 @@ jobs:
         run: npm run coverage
 
       - name: Download other coverage reports
-        uses: actions/download-artifact@v2
+        uses: dawidd6/action-download-artifact@v2
         with:
+          workflow: python.yaml
           name: python-coverage-report
+          check_artifacts:  true
       
       - name: Upload Coverage
         env:
