@@ -30,8 +30,6 @@ jobs:
       - name: Run Node Coverage
         run: npm run coverage
       
-      - name: Upload Coverage
-        steps:
-          run: export CODACY_PROJECT_TOKEN=a95e7f2eaf7742eab01dbd7b526283c8
-          run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/lcov.info
+      - run: export CODACY_PROJECT_TOKEN=a95e7f2eaf7742eab01dbd7b526283c8
+      - run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/lcov.info
           
