@@ -1,0 +1,37 @@
+name: Python Code Coverage
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "python/**"
+
+jobs:
+  codacy-coverage:
+    defaults:
+      run:
+        working-directory: python
+      
+    name: Run and Push Python Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+        
+      - name: Pip Install
+        run: pip install
+
+      - run: coverage run -m pytest
+      - run: coverage xml
+
+      - name: Upload Coverage
+        env:
+          CODACY_PROJECT_TOKEN: a95e7f2eaf7742eab01dbd7b526283c8
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
+          
