@@ -29,15 +29,27 @@ jobs:
       - run: coverage run -m pytest
       - run: coverage xml
 
-      - name: Upload Coverage
+      - name: Download other coverage reports
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: node.yaml
+          name: coverage-report
+          check_artifacts:  true
+
+      - name: Upload Python Coverage
         env:
           CODACY_PROJECT_TOKEN: a95e7f2eaf7742eab01dbd7b526283c8
         run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
+
+      - name: Upload Node Coverage
+        env:
+          CODACY_PROJECT_TOKEN: a95e7f2eaf7742eab01dbd7b526283c8
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r ../lcov.info
       
       - name: Archive code coverage
         uses: actions/upload-artifact@v2
         with:
-          name: python-coverage-report
+          name: coverage-report
           path: python/coverage.xml
 
           
