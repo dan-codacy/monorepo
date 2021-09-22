@@ -11,7 +11,7 @@ jobs:
   codacy-coverage:
     defaults:
       run:
-      working-directory: javascript
+        working-directory: javascript
       
     name: Run and Push Node Coverage
     runs-on: ubuntu-latest
