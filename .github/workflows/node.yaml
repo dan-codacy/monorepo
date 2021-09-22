@@ -40,7 +40,7 @@ jobs:
       - name: Upload Coverage
         env:
           CODACY_PROJECT_TOKEN: a95e7f2eaf7742eab01dbd7b526283c8
-        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/lcov.info -r ../python-coverage-report
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/lcov.info -r ../coverage.xml
       
       - name: Archive code coverage
         uses: actions/upload-artifact@v2
