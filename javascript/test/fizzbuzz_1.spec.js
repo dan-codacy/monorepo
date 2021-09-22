@@ -18,6 +18,6 @@ describe('FizzBuzz - First Half', function() {
       assert.equal(fizzbuzz(6), "Fizz");
     });
 
-    // coverage run please!!!
+    // coverage run please!!
 
 });
