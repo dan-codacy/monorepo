@@ -37,10 +37,15 @@ jobs:
           name: python-coverage-report
           check_artifacts:  true
       
-      - name: Upload Coverage
+      - name: Upload Node Coverage
         env:
           CODACY_PROJECT_TOKEN: a95e7f2eaf7742eab01dbd7b526283c8
-        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/lcov.info -r ../coverage.xml
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/lcov.info
+
+      - name: Upload Python Coverage
+        env:
+          CODACY_PROJECT_TOKEN: a95e7f2eaf7742eab01dbd7b526283c8
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r ../coverage.xml
       
       - name: Archive code coverage
         uses: actions/upload-artifact@v2
